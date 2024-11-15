@@ -11,6 +11,78 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>who the hell is red shoes?</h1>
+		<p>the closest one i know is <span id="result"></span></p>
+		<button id="generate">generate</button>
+
+		<script>
+			const button = document.getElementById("generate");
+			const result = document.getElementById("result");
+
+			const red = [
+				"red",
+				"scarlet",
+				"vermillion",
+				"ruby",
+				"ruby red",
+				"ruby colored",
+				"cherry",
+				"cherry red",
+				"cerise",
+				"cardinal",
+				"wine",
+				"wine red",
+				"wine colored",
+				"claret",
+				"claret red",
+				"claret colored",
+				"blood",
+				"blood red",
+				"coral",
+				"cochineal",
+				"rose",
+				"rosy",
+				"brick red",
+				"maroon",
+				"rusty",
+				"reddish",
+				"damask",
+				"vermeil",
+				"saguine",
+				"rufescent",
+				"bloodshot",
+				"red-rimmed",
+				"reddish"
+			];
+			
+			const shoes = [
+				"shoes",
+				"boots",
+				"cleats",
+				"loafers",
+				"slippers",
+				"sneakers",
+				"clogs",
+				"flip flops",
+				"footgears",
+				"sandals",
+				"moccasins",
+				"high heels",
+				"footwear",
+				"chanclas",
+				"kicks",
+				"waders",
+				"galoshes",
+				"feets",
+				"foot coats",
+				"foot holders",
+			];
+
+			button.onclick = () => {
+				result.innerHTML = `${red[Math.round(Math.random() * (red.length - 1))]} ${shoes[Math.round(Math.random() * (shoes.length - 1))]}`
+			}
+
+			button.onclick(null);
+		</script>
 	</body>
 </html>
